@@ -20,7 +20,7 @@ struct queue {
 
 ## Part 2
 - create_queue: initializes an empty queue
-- is_empty: checks if it is empty (necessary for insertiona and removal)
+- is_empty: checks if it is empty (necessary for insertion and removal)
 ```
 create_queue(q)
 struct queue *q;
