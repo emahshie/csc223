@@ -34,3 +34,11 @@ struct node {
 };
 ```
 Also has a pointer root that points to the root element
+
+# 9.2.4: Binary Search Trees
+- Also known as an ordered binary tree
+- A type of binary tree where the nodes are arranged in an order
+
+# 9.2.5: Expression Trees
+- Used to store algebraic experssions
+![Example](/csc223/Screenshot%202026-02-26%20at%2011.17.26 AM.pngcsc223/Screenshot 2026-02-26 at 11.17.26 AM.png)
