@@ -1,4 +1,4 @@
-# 9.1 : Introduction
+# 9.1: Introduction
 - A tree is a recursively defined structure
 - Each node is split into two sub nodes, which then have their own sub nodes
 - Root node: the topmost node in the tree. If null, the tree is empty
@@ -12,7 +12,9 @@
 - In-degree: the number of edges arriving at that node
 - Out-degree: the number of edges leaving that node
 
-# 9.2.3: Binary Trees
+# 9.2: Types of Trees
+
+## 9.2.3: Binary Trees
 - Every node contains a data element, a left pointer which points to the left child and a right pointer which points to the right child (left empty if it's a terminal node)
 - Parent: the node pointing to the left child and right child (root is the only node without a parent)
 - Sibling: nodes that share the same level and parent
@@ -35,10 +37,44 @@ struct node {
 ```
 Also has a pointer root that points to the root element
 
-# 9.2.4: Binary Search Trees
+## 9.2.4: Binary Search Trees
 - Also known as an ordered binary tree
 - A type of binary tree where the nodes are arranged in an order
 
-# 9.2.5: Expression Trees
+## 9.2.5: Expression Trees
 - Used to store algebraic experssions
 ![Example](/Screenshot%202026-02-26%20at%2011.17.26 AM.png)
+
+# 9.4: Traversing a Binary Tree
+- The process of visiting each node in the tree exactly once in a systematic way
+- Trees are non-linear data structures, so elements can be traversed in many different ways
+
+## 9.4.1: Pre-order Traversal
+1. Visit root node
+2. Traverse left sub-tree
+3. Traverse right sub-tree
+- Also known as Node-Left-Right (NLR)
+- Extracts a prefix notation from an expression tree
+- Pre-order traversal of image above would result in: % – + a b * c d / ^ e f – g h
+
+## 9.4.2: In-order Traversal
+1. Traverse left sub-tree
+2. Visit root node
+3. Traverse right sub-tree
+- Also known as symmetric traversal or Left-Node-Right (LNR)
+
+## 9.4.3: Post-order Traversal
+1. Traverse left sub-tree
+2. Traverse right sub-tree
+3. Visit root node
+- Also known as Left-Right-Node (LRN)
+
+## 9.4.4: Level-order Traversal
+- All the nodes at a level are accessed before going to the next level
+- Also known as the breadth-first traversal algorithm
+
+## 9.4.5: Constructing a Binary Tree from Traversal Results
+- If given at least two different traversal results, you can construct a binary tree
+1. If given a pre-order or post-order, use it to identify the node
+2. Separate elements into the sides
+3. Recursively select elements from the traversals to create their sub trees
