@@ -1,6 +1,7 @@
 # Overview
 -  Invented in 1972 by Rudolf Bayer who called it the ‘symmetric binary B-tree’
 - Inserts and removes intelligently to keep the tree balanced and be efficient
+- Leaf nodes contain no data
 - Properties:
     1. Every node is either red or black
     2. The root node is always black
@@ -22,3 +23,9 @@
     - Used for indexing tables to enhance search and retrieval speeds in systems like MySQL and SQLite
 
 # Insertion
+- Insertion consists of two parts: the actual insertion and fixing the tree to ensure all properties are maintained
+
+1. Find the correct leaf position and insert a new red node with two black leaf nodes
+2.  
+Instead of adding the new node as a leaf, we add a red interior node that has two black leaf nodes
+- We then check to make sure all properties of a red-black tree are maintained
