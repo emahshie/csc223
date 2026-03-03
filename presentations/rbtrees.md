@@ -25,7 +25,7 @@
 # Insertion
 - Insertion consists of two parts: the actual insertion and fixing the tree to ensure all properties are maintained
 
-1. Find the correct leaf position and insert a new red node with two black leaf nodes (must be red so we automatically don't violate property 5)
+1. Find the correct leaf position and insert a new red node with two black leaf nodes (must be red so we don't change black-height and violate property 5)
 2. Handle immediate exceptions: 
     - If the tree was empty, the new node is the root. Color it black, and insertion is complete
     - If the parent is black, no properties are violated, and insertion is complete
@@ -38,3 +38,5 @@
         - Rotate the parent to turn it into an outer child and proceed to Case 3
     - Case 3: Uncle is black (or null), node is an outer child (left child of a left child or right child of a right child)
         - Rotate the grandparent in the opposite direction. Then swap the colors of the original parent and the original grandparent
+        - Rotate the grandparent in the opposite direction. Then recolor the original parent to black and the original grandparent to red
+4. Ensure the root is black
