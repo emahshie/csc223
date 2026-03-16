@@ -93,29 +93,42 @@ main()
 {
     int choice, val, removed;
     initheap();
-    printf("Max Heap Manager\n");
-    printf("================\n");
     for (;;) {
-        printf("\n1) Insert\n2) Remove max\n3) Display\n4) Quit\n");
-        printf("Choice: ");
-        scanf("%d", &choice);
-        if (choice == 1) {
+        printf("\n1 - Insert\n2 - Remove max\n3 - Display\n4 - Quit\n");
+    printf("Choice: ");
+    scanf("%d", &choice);
+
+    switch (choice) {
+        case 1:
             printf("Value to insert: ");
             scanf("%d", &val);
             insert(val);
             printf("Inserted %d\n", val);
-        } else if (choice == 2) {
+            break;
+
+        case 2:
             removed = delroot();
             if (removed != -1) {
                 printf("Removed max: %d\n", removed);
             }
-        } else if (choice == 3) {
-            prheap();
-        } else if (choice == 4) {
             break;
-        } else {
+
+        case 3:
+            prheap();
+            break;
+
+        case 4:
+            break;
+
+        default:
             printf("Invalid choice\n");
+            break;
+        
+            if (choice == 4) {
+            break;
         }
+    }
+
     }
     return 0;
 }
