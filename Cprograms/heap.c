@@ -123,10 +123,10 @@ main()
         default:
             printf("Invalid choice\n");
             break;
-        
-            if (choice == 4) {
-            break;
         }
+
+        if (choice == 4) {
+            break;
     }
 
     }
