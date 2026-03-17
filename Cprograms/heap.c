@@ -73,21 +73,31 @@ delroot()
     return last;
 }
 
+
 prheap()
 {
-    int i;
-    if (hsize == 0) {
-        printf("Heap is empty\n");
-        return 0;
+int i;
+int endlevel; 
+endlevel = 1;
+
+if (hsize == 0) {
+printf("Heap is empty\n");
+return 0;
+}
+
+printf("\nHeap Structure:\n");
+for (i = 1; i <= hsize; i++) {
+    printf("%d ", heap[i]);
+
+    if (i == endlevel) {
+        printf("\n");
+        endlevel = (endlevel * 2) + 1;
     }
-    printf("Heap (%d elements): ", hsize);
-    for (i = 1; i <= hsize; i++) {
-        printf("%d ", heap[i]);
-    }
-    printf("\n");
-    printf("Max (root) = %d\n", heap[1]);
+    }   
+    printf("\nMax (root) = %d\n", heap[1]);
     return 1;
 }
+
 
 main()
 {
