@@ -1,4 +1,4 @@
-# My Adjacency List
+# Adjacency List Visulization
 
 ```mermaid
 graph LR
@@ -18,3 +18,15 @@ graph LR
     %% Styling to make it look like sharp data blocks
     classDef nodeStyle fill:#fff,stroke:#333,shape:rect
     class A_root,B_root,C_root,D_root,A1,A2,B1,B2,C1,D1,D2 nodeStyle
+```
+
+```mermaid
+flowchart TD
+   A --- B
+   A --- C
+   B --- D
+   B --- C
+   C --- D
+   D --- A
+   D --- B
+```
