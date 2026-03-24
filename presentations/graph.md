@@ -1,0 +1,20 @@
+# My Adjacency List
+
+```mermaid
+graph LR
+    subgraph Array [Vertices]
+        direction TB
+        A_root[A]
+        B_root[B]
+        C_root[C]
+        D_root[D]
+    end
+
+    A_root --> A1[B] --> A2[C X]
+    B_root --> B1[C] --> B2[D X]
+    C_root --> C1[D X]
+    D_root --> D1[A] --> D2[B X]
+
+    %% Styling to make it look like sharp data blocks
+    classDef nodeStyle fill:#fff,stroke:#333,shape:rect
+    class A_root,B_root,C_root,D_root,A1,A2,B1,B2,C1,D1,D2 nodeStyle
