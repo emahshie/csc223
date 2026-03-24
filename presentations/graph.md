@@ -10,9 +10,9 @@ graph LR
         D_root[D]
     end
 
-    A_root --> A1[B] --> A2[C X]
+    A_root --> A1[B] --> A2[D X]
     B_root --> B1[C] --> B2[D X]
-    C_root --> C1[D X]
+    C_root --> C1[B] --> C2[D X]
     D_root --> D1[A] --> D2[B X]
 
     %% Styling to make it look like sharp data blocks
@@ -23,10 +23,7 @@ graph LR
 ```mermaid
 flowchart TD
    A --- B
-   A --- C
+   A --- D
    B --- D
    B --- C
-   C --- D
-   D --- A
-   D --- B
 ```
