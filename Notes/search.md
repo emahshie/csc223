@@ -1,5 +1,3 @@
-page 438-447
-
 # Searching Notes
 
 ## 14.1: Intro
