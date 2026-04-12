@@ -1,11 +1,12 @@
 #include <stdio.h>
+#include "SORT.H"
 
 #define BUFSIZ 130
 #define ERROR -1
 #define MAX_SIZE 50
 
 
-selection_sort(items, count)
+selsort(items, count)
 int items[];
 int count;
 {
@@ -47,7 +48,7 @@ char *argv[];
 
     fclose(infp);
 
-    selection_sort(data, count);
+    selsort(data, count);
 
     if ((outfp = fopen(argv[2], "w")) == NULL) {
         puts("Can't create output\n");
