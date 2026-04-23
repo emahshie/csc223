@@ -2,7 +2,6 @@
 #define TRUE 1
 #define FALSE 0
 
-/* Explicitly define as int, though it's the default in BDS C */
 int count_ints(fp, val)
 FILE *fp;
 int *val;
